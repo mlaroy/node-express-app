@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style type="text/css">
+      .checkbox {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <br>
+    <div class="row">
+      <div class="col-md-5">
+        <form id="listings" class="form">
+          <div class="form-group">
+            <span class="form-label">Name of Property</span> <br>
+            <input type="text" name="name" placeholder="Name" class="form-control">
+          </div>
+          <div class="form-group">
+            <span class="form-label">Property Type</span> <br>
+            <select class="select" name="type">
+              <option value="house">House</option>
+              <option value="apartment">Apartment</option>
+              <option value="condo">Condo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <span class="form-label">Address</span> <br>
+            <input type="text" name="address" placeholder="Address" class="form-control">
+          </div>
+          <div class="form-group">
+            <span class="form-label">Price</span> <br>
+            <input type="text" name="price" placeholder="350,000" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="checkbox" name="rentals" placeholder="350,000" class="checkbox">
+            <label for="rentals">Rentals Allowed?</label>
+          </div>
+          <div class="form-group">
+            <label for="rental">Description</label>
+            <textarea name="description" placeholder="Property description" class="form-control"></textarea>
+            <!-- <span cl></span> -->
+          </div>
+          <input type="submit" class="btn btn-default" value="Submit Listing"/>
+        </form>
+        <br>
+        <div id="message">
+
+        </div>
+      </div>
+      <div class="col-md-7">
+        <h2>View Listings</h2>
+        <table class="table table-striped table-bordered table-hover table-condensed">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Date Listed</th>
+              <th>Price</th>
+              <th>Type</th>
+              <th>Address</th>
+              <th>Rentals</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody id="property-list">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="javascripts/properties.js"></script>
+  </body>
+</html>
